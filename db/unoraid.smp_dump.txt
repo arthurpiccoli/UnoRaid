@@ -1,0 +1,8 @@
+
+State Machine - |unoraid|estado_atual
+Name estado_atual.e4 estado_atual.e3 estado_atual.e2 estado_atual.e1 estado_atual.e0 
+estado_atual.e0 0 0 0 0 0 
+estado_atual.e1 0 0 0 1 1 
+estado_atual.e2 0 0 1 0 1 
+estado_atual.e3 0 1 0 0 1 
+estado_atual.e4 1 0 0 0 1 

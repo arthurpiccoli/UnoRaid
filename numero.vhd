@@ -1,0 +1,158 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+package numero is
+	procedure desenho_numero(
+		signal x_atual, y_atual, x_pos, y_pos, valor: in integer;
+		signal desenhar: out std_logic
+	);
+end numero;
+
+package body numero is
+	procedure desenho_numero(
+		signal x_atual, y_atual, x_pos, y_pos, valor: in integer;
+		signal desenhar: out std_logic
+	) is
+
+begin
+	if(valor = 1)then
+		if(x_atual >= (x_pos + 32) and x_atual < (x_pos + 48) and y_atual >= y_pos and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+	else
+		desenhar <= '0';
+	end if;	
+	
+	elsif(valor = 2)then
+		if(x_atual >= (x_pos + 32) and x_atual < (x_pos + 48) and y_atual >= y_pos + 16 and y_atual < (y_pos + 32)) then
+		desenhar <= '1';
+	elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos  and y_atual < (y_pos + 16)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 32  and y_atual < (y_pos + 48)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 64 and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 16) and y_atual >= y_pos + 48 and y_atual < (y_pos + 64)) then
+		desenhar <= '1';
+		else
+		desenhar <= '0';
+	end if;	
+	
+	
+	elsif(valor = 3)then
+	
+	if(x_atual >= (x_pos + 32) and x_atual < (x_pos + 48) and y_atual >= y_pos + 16 and y_atual < (y_pos + 32)) then
+		desenhar <= '1';
+	elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos  and y_atual < (y_pos + 16)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 32  and y_atual < (y_pos + 48)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 64 and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos+32) and x_atual < (x_pos + 48) and y_atual >= y_pos + 48 and y_atual < (y_pos + 64)) then
+		desenhar <= '1';
+		else
+		desenhar <= '0';
+		end if;
+	
+	elsif(valor = 4)then
+	
+	if(x_atual >= (x_pos + 32) and x_atual < (x_pos + 48) and y_atual >= y_pos and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+	elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 32  and y_atual < (y_pos + 48)) then
+		desenhar <= '1';
+	elsif(x_atual >= (x_pos) and x_atual < (x_pos + 16) and y_atual >= y_pos  and y_atual < (y_pos + 32)) then
+		desenhar <= '1';
+		
+	else
+	desenhar <= '0';
+	end if;
+	elsif(valor = 5)then
+	if(x_atual >= (x_pos ) and x_atual < (x_pos + 16) and y_atual >= y_pos + 16 and y_atual < (y_pos + 32)) then
+		desenhar <= '1';
+	elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos  and y_atual < (y_pos + 16)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 32  and y_atual < (y_pos + 48)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 64 and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos+32) and x_atual < (x_pos + 48) and y_atual >= y_pos + 48 and y_atual < (y_pos + 64)) then
+		desenhar <= '1';
+		else
+		desenhar <= '0';
+	end if;	
+	
+	elsif(valor = 6)then
+	if(x_atual >= (x_pos ) and x_atual < (x_pos + 16) and y_atual >= y_pos + 16 and y_atual < (y_pos + 32)) then
+		desenhar <= '1';
+	elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos  and y_atual < (y_pos + 16)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 32  and y_atual < (y_pos + 48)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 64 and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos+32) and x_atual < (x_pos + 48) and y_atual >= y_pos + 48 and y_atual < (y_pos + 64)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 16) and y_atual >= y_pos + 48 and y_atual < (y_pos + 64)) then
+		desenhar <= '1';
+		else
+		desenhar <= '0';
+	end if;	
+	elsif(valor = 7)then
+	if(x_atual >= (x_pos + 32) and x_atual < (x_pos + 48) and y_atual >= y_pos and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+	elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos  and y_atual < (y_pos + 16)) then
+		desenhar <= '1';
+	else
+		desenhar <= '0';
+	end if;	
+	elsif(valor = 8)then
+	if(x_atual >= (x_pos + 32) and x_atual < (x_pos + 48) and y_atual >= y_pos and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+	elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos  and y_atual < (y_pos + 16)) then
+		desenhar <= '1';
+	elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 32  and y_atual < (y_pos + 48)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 64 and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 16) and y_atual >= y_pos and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+		else
+		desenhar <= '0';
+		end if;
+	elsif(valor = 9)then
+	if(x_atual >= (x_pos + 32) and x_atual < (x_pos + 48) and y_atual >= y_pos and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+	elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos  and y_atual < (y_pos + 16)) then
+		desenhar <= '1';
+	elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 32  and y_atual < (y_pos + 48)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 64 and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 16) and y_atual >= y_pos and y_atual < (y_pos + 32)) then
+		desenhar <= '1';
+		else
+		desenhar <= '0';
+		end if;
+	else
+	if(x_atual >= (x_pos + 32) and x_atual < (x_pos + 48) and y_atual >= y_pos and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+	elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos  and y_atual < (y_pos + 16)) then
+		desenhar <= '1';
+	
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 48) and y_atual >= y_pos + 64 and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+		elsif(x_atual >= (x_pos) and x_atual < (x_pos + 16) and y_atual >= y_pos and y_atual < (y_pos + 80)) then
+		desenhar <= '1';
+		else
+		desenhar <= '0';
+		end if;
+	end if;
+	
+		
+	 
+	end desenho_numero;
+end numero;	
+	
+	

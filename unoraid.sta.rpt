@@ -1,0 +1,1358 @@
+TimeQuest Timing Analyzer report for unoraid
+Thu Mar 08 13:58:07 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLKM_M|altpll_component|pll|clk[0]'
+ 12. Slow Model Hold: 'CLKM_M|altpll_component|pll|clk[0]'
+ 13. Slow Model Minimum Pulse Width: 'CLKM_M|altpll_component|pll|clk[0]'
+ 14. Slow Model Minimum Pulse Width: 'clk_27'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'CLKM_M|altpll_component|pll|clk[0]'
+ 25. Fast Model Hold: 'CLKM_M|altpll_component|pll|clk[0]'
+ 26. Fast Model Minimum Pulse Width: 'CLKM_M|altpll_component|pll|clk[0]'
+ 27. Fast Model Minimum Pulse Width: 'clk_27'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Setup Times
+ 34. Hold Times
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Setup Transfers
+ 38. Hold Transfers
+ 39. Report TCCS
+ 40. Report RSKM
+ 41. Unconstrained Paths
+ 42. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; unoraid                                                           ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                    ;
++------------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------+----------------------------------------+
+; Clock Name                         ; Type      ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source                               ; Targets                                ;
++------------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------+----------------------------------------+
+; clk_27                             ; Base      ; 37.037 ; 27.0 MHz  ; 0.000 ; 18.518 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                      ; { clk_27 }                             ;
+; CLKM_M|altpll_component|pll|clk[0] ; Generated ; 9.259  ; 108.0 MHz ; 0.000 ; 4.629  ; 50.00      ; 1         ; 4           ;       ;        ;           ;            ; false    ; clk_27 ; CLKM_M|altpll_component|pll|inclk[0] ; { CLKM_M|altpll_component|pll|clk[0] } ;
++------------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                ;
++----------+-----------------+------------------------------------+------+
+; Fmax     ; Restricted Fmax ; Clock Name                         ; Note ;
++----------+-----------------+------------------------------------+------+
+; 86.7 MHz ; 86.7 MHz        ; CLKM_M|altpll_component|pll|clk[0] ;      ;
++----------+-----------------+------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------------------------+
+; Slow Model Setup Summary                                    ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; CLKM_M|altpll_component|pll|clk[0] ; -2.275 ; -46.431       ;
++------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------+
+; Slow Model Hold Summary                                    ;
++------------------------------------+-------+---------------+
+; Clock                              ; Slack ; End Point TNS ;
++------------------------------------+-------+---------------+
+; CLKM_M|altpll_component|pll|clk[0] ; 0.391 ; 0.000         ;
++------------------------------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-------------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                      ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; CLKM_M|altpll_component|pll|clk[0] ; 3.629  ; 0.000         ;
+; clk_27                             ; 18.518 ; 0.000         ;
++------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLKM_M|altpll_component|pll|clk[0]'                                                                                                      ;
++--------+-----------------+---------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node       ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+---------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; -2.275 ; quadrado3_y[2]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 11.565     ;
+; -2.105 ; HPixel[8]       ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.011     ; 11.389     ;
+; -2.068 ; quadrado3_y[5]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 11.358     ;
+; -2.052 ; HPixel[10]      ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.011     ; 11.336     ;
+; -2.044 ; quadrado3_y[3]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 11.331     ;
+; -2.037 ; quadrado3_y[6]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 11.324     ;
+; -2.002 ; quadrado3_y[2]  ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.002     ; 11.295     ;
+; -1.982 ; HPixel[9]       ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.011     ; 11.266     ;
+; -1.971 ; personagem_x[2] ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.003     ; 11.263     ;
+; -1.966 ; personagem_x[3] ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.000      ; 11.261     ;
+; -1.955 ; quadrado3_y[2]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 11.240     ;
+; -1.951 ; personagem_x[5] ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.000      ; 11.246     ;
+; -1.938 ; HPixel[8]       ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.012     ; 11.221     ;
+; -1.937 ; quadrado1_y[3]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.010      ; 11.242     ;
+; -1.929 ; quadrado1_y[2]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.007      ; 11.231     ;
+; -1.918 ; quadrado2_y[5]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.021     ; 11.192     ;
+; -1.916 ; quadrado1_y[4]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.010      ; 11.221     ;
+; -1.902 ; quadrado3_y[7]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 11.189     ;
+; -1.891 ; quadrado3_y[4]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 11.181     ;
+; -1.885 ; HPixel[10]      ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.012     ; 11.168     ;
+; -1.881 ; quadrado1_x[9]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.009     ; 11.167     ;
+; -1.875 ; personagem_x[4] ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.000      ; 11.170     ;
+; -1.866 ; HPixel[8]       ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 11.151     ;
+; -1.863 ; quadrado3_y[2]  ; VGA_R[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 11.148     ;
+; -1.849 ; quadrado3_y[2]  ; VGA_G[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.011     ; 11.133     ;
+; -1.840 ; quadrado2_y[5]  ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.020     ; 11.115     ;
+; -1.815 ; HPixel[9]       ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.012     ; 11.098     ;
+; -1.813 ; HPixel[10]      ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 11.098     ;
+; -1.808 ; quadrado3_y[2]  ; VGA_R[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 11.098     ;
+; -1.801 ; quadrado1_y[5]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.010      ; 11.106     ;
+; -1.798 ; quadrado3_y[2]  ; VGA_R[6]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 11.086     ;
+; -1.795 ; quadrado3_y[5]  ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.002     ; 11.088     ;
+; -1.788 ; HPixel[8]       ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.009     ; 11.074     ;
+; -1.787 ; quadrado3_y[2]  ; VGA_B[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 11.072     ;
+; -1.777 ; personagem_x[2] ; VGA_G[2]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.011     ; 11.061     ;
+; -1.776 ; quadrado3_y[2]  ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 11.063     ;
+; -1.772 ; quadrado3_y[2]  ; VGA_G[2]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 11.057     ;
+; -1.772 ; personagem_x[3] ; VGA_G[2]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 11.059     ;
+; -1.771 ; quadrado3_y[3]  ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 11.061     ;
+; -1.771 ; quadrado2_y[2]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.021     ; 11.045     ;
+; -1.770 ; quadrado1_y[3]  ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.009      ; 11.074     ;
+; -1.764 ; quadrado3_y[6]  ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 11.054     ;
+; -1.763 ; personagem_x[2] ; VGA_R[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.006     ; 11.052     ;
+; -1.762 ; quadrado1_y[2]  ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.006      ; 11.063     ;
+; -1.758 ; personagem_x[3] ; VGA_R[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.003     ; 11.050     ;
+; -1.757 ; personagem_x[5] ; VGA_G[2]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 11.044     ;
+; -1.753 ; personagem_x[7] ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.003     ; 11.045     ;
+; -1.751 ; quadrado2_y[7]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.028     ; 11.018     ;
+; -1.749 ; quadrado1_y[4]  ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.009      ; 11.053     ;
+; -1.748 ; quadrado3_y[5]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 11.033     ;
+; -1.746 ; quadrado2_y[4]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.021     ; 11.020     ;
+; -1.744 ; personagem_x[2] ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 11.029     ;
+; -1.743 ; HPixel[9]       ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 11.028     ;
+; -1.743 ; personagem_x[5] ; VGA_R[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.003     ; 11.035     ;
+; -1.743 ; quadrado2_y[3]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.021     ; 11.017     ;
+; -1.739 ; personagem_x[3] ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 11.027     ;
+; -1.735 ; HPixel[10]      ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.009     ; 11.021     ;
+; -1.733 ; quadrado3_y[2]  ; VGA_R[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.011     ; 11.017     ;
+; -1.726 ; quadrado1_y[6]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.010      ; 11.031     ;
+; -1.724 ; quadrado3_y[3]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.013     ; 11.006     ;
+; -1.724 ; personagem_x[5] ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 11.012     ;
+; -1.717 ; quadrado3_y[6]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.013     ; 10.999     ;
+; -1.714 ; quadrado1_x[9]  ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 10.999     ;
+; -1.708 ; HPixel[8]       ; VGA_B[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.011     ; 10.992     ;
+; -1.707 ; personagem_x[6] ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.003     ; 10.999     ;
+; -1.698 ; quadrado1_y[3]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.011      ; 11.004     ;
+; -1.693 ; quadrado2_y[2]  ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.020     ; 10.968     ;
+; -1.690 ; quadrado1_y[2]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.008      ; 10.993     ;
+; -1.681 ; personagem_x[4] ; VGA_G[2]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 10.968     ;
+; -1.677 ; quadrado1_y[4]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.011      ; 10.983     ;
+; -1.675 ; personagem_x[2] ; VGA_R[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 10.960     ;
+; -1.673 ; quadrado2_y[7]  ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.027     ; 10.941     ;
+; -1.672 ; quadrado3_y[8]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 10.959     ;
+; -1.670 ; personagem_x[3] ; VGA_R[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 10.958     ;
+; -1.668 ; personagem_x[2] ; VGA_B[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.011     ; 10.952     ;
+; -1.668 ; quadrado2_y[4]  ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.020     ; 10.943     ;
+; -1.667 ; personagem_x[4] ; VGA_R[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.003     ; 10.959     ;
+; -1.665 ; HPixel[9]       ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.009     ; 10.951     ;
+; -1.665 ; quadrado2_y[3]  ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.020     ; 10.940     ;
+; -1.664 ; VPixel[1]       ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.007      ; 10.966     ;
+; -1.663 ; HPixel[4]       ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.011     ; 10.947     ;
+; -1.663 ; personagem_x[3] ; VGA_B[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 10.950     ;
+; -1.661 ; personagem_x[2] ; VGA_B[4]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 10.948     ;
+; -1.661 ; personagem_x[2] ; VGA_R[6]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 10.948     ;
+; -1.656 ; quadrado3_y[5]  ; VGA_R[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 10.941     ;
+; -1.656 ; personagem_x[3] ; VGA_B[4]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 10.946     ;
+; -1.656 ; personagem_x[3] ; VGA_R[6]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 10.946     ;
+; -1.655 ; HPixel[10]      ; VGA_B[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.011     ; 10.939     ;
+; -1.655 ; personagem_x[5] ; VGA_R[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 10.943     ;
+; -1.648 ; personagem_x[5] ; VGA_B[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 10.935     ;
+; -1.648 ; personagem_x[4] ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 10.936     ;
+; -1.642 ; quadrado1_x[9]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 10.929     ;
+; -1.642 ; quadrado3_y[5]  ; VGA_G[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.011     ; 10.926     ;
+; -1.641 ; quadrado2_y[8]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.028     ; 10.908     ;
+; -1.641 ; personagem_x[5] ; VGA_B[4]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 10.931     ;
+; -1.641 ; personagem_x[5] ; VGA_R[6]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 10.931     ;
+; -1.634 ; quadrado1_y[5]  ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.009      ; 10.938     ;
+; -1.632 ; quadrado3_y[3]  ; VGA_R[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.013     ; 10.914     ;
+; -1.629 ; quadrado3_y[7]  ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 10.919     ;
+; -1.625 ; quadrado3_y[6]  ; VGA_R[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.013     ; 10.907     ;
++--------+-----------------+---------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLKM_M|altpll_component|pll|clk[0]'                                                                                                        ;
++-------+-----------------+-----------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node         ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; 0.391 ; estado_atual.e1 ; estado_atual.e1 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_b[8]  ; quadrado2_b[8]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_b[10] ; quadrado2_b[10] ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_b[1]  ; quadrado2_b[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_b[3]  ; quadrado3_b[3]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_b[4]  ; quadrado3_b[4]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_b[5]  ; quadrado3_b[5]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_b[6]  ; quadrado3_b[6]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_b[7]  ; quadrado3_b[7]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_b[8]  ; quadrado3_b[8]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_b[9]  ; quadrado3_b[9]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_b[10] ; quadrado3_b[10] ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_b[1]  ; quadrado3_b[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_b[2]  ; quadrado3_b[2]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_b[8]  ; quadrado1_b[8]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_b[9]  ; quadrado1_b[9]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_b[10] ; quadrado1_b[10] ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_b[1]  ; quadrado1_b[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_a[1]  ; quadrado1_a[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_a[0]  ; quadrado1_a[0]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_y[1]  ; quadrado1_y[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_y[2]  ; quadrado1_y[2]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_y[3]  ; quadrado1_y[3]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_y[4]  ; quadrado1_y[4]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_y[5]  ; quadrado1_y[5]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_y[6]  ; quadrado1_y[6]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_a[1]  ; quadrado2_a[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_a[0]  ; quadrado2_a[0]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_y[8]  ; quadrado2_y[8]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_y[1]  ; quadrado2_y[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_y[2]  ; quadrado2_y[2]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_y[3]  ; quadrado2_y[3]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_y[4]  ; quadrado2_y[4]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_y[5]  ; quadrado2_y[5]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_y[6]  ; quadrado2_y[6]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado2_y[7]  ; quadrado2_y[7]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_y[1]  ; quadrado3_y[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_y[2]  ; quadrado3_y[2]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_y[3]  ; quadrado3_y[3]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_y[4]  ; quadrado3_y[4]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_y[5]  ; quadrado3_y[5]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_y[6]  ; quadrado3_y[6]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_y[7]  ; quadrado3_y[7]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_y[8]  ; quadrado3_y[8]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_y[10] ; quadrado3_y[10] ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_a[1]  ; quadrado3_a[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado3_a[0]  ; quadrado3_a[0]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; bateu           ; bateu           ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_b[7]  ; quadrado1_b[7]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; quadrado1_y[7]  ; quadrado1_y[7]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; auxscore[0]     ; auxscore[0]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; auxscore[1]     ; auxscore[1]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; auxscore[2]     ; auxscore[2]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; auxscore[4]     ; auxscore[4]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; auxscore[5]     ; auxscore[5]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; auxscore[6]     ; auxscore[6]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; auxscore[3]     ; auxscore[3]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; grama_y[2]      ; grama_y[2]      ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; grama_y[3]      ; grama_y[3]      ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; vga_hsync       ; vga_hsync       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; vga_vsync       ; vga_vsync       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.527 ; quadrado2_a[0]  ; quadrado2_a[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.793      ;
+; 0.529 ; quadrado3_a[1]  ; quadrado3_a[0]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.795      ;
+; 0.546 ; HCount[10]      ; HCount[10]      ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.812      ;
+; 0.549 ; score[6]        ; score[6]        ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.815      ;
+; 0.552 ; auxscore2[6]    ; auxscore2[6]    ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.818      ;
+; 0.552 ; quadrado1_a[1]  ; quadrado1_a[0]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.818      ;
+; 0.552 ; HCount[5]       ; vga_hsync       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.818      ;
+; 0.553 ; quadrado1_a[1]  ; quadrado1_x[6]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.819      ;
+; 0.556 ; quadrado1_a[0]  ; quadrado1_a[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.822      ;
+; 0.558 ; quadrado1_a[0]  ; quadrado1_x[10] ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.824      ;
+; 0.677 ; estado_atual.e4 ; estado_atual.e0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.943      ;
+; 0.681 ; estado_atual.e2 ; estado_atual.e4 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.947      ;
+; 0.682 ; estado_atual.e2 ; estado_atual.e3 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.948      ;
+; 0.770 ; estado_atual.e4 ; estado_atual.e1 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.036      ;
+; 0.799 ; quadrado3_a[0]  ; quadrado3_a[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.065      ;
+; 0.802 ; quadrado2_a[1]  ; quadrado2_a[0]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.068      ;
+; 0.803 ; quadrado1_a[1]  ; quadrado1_x[10] ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.069      ;
+; 0.805 ; VCount[1]       ; VCount[1]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.071      ;
+; 0.809 ; VCount[9]       ; VCount[9]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.075      ;
+; 0.809 ; VCount[2]       ; VCount[2]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.075      ;
+; 0.810 ; VCount[4]       ; VCount[4]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.076      ;
+; 0.812 ; auxscore2[3]    ; auxscore2[3]    ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.078      ;
+; 0.813 ; VCount[7]       ; VCount[7]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.079      ;
+; 0.815 ; HPixel[0]       ; HPixel[0]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.081      ;
+; 0.819 ; HCount[8]       ; HCount[8]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.085      ;
+; 0.819 ; auxscore2[1]    ; auxscore2[1]    ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.085      ;
+; 0.820 ; HCount[0]       ; HCount[0]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.086      ;
+; 0.820 ; HPixel[7]       ; HPixel[7]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.086      ;
+; 0.821 ; HCount[1]       ; HCount[1]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.087      ;
+; 0.821 ; HCount[3]       ; HCount[3]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.087      ;
+; 0.821 ; HPixel[9]       ; HPixel[9]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.087      ;
+; 0.822 ; score[1]        ; score[1]        ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.088      ;
+; 0.824 ; score[3]        ; score[3]        ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.090      ;
+; 0.824 ; score[5]        ; score[5]        ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.090      ;
+; 0.827 ; auxscore2[5]    ; auxscore2[5]    ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.093      ;
+; 0.829 ; HCount[6]       ; HCount[6]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.095      ;
+; 0.829 ; estado_atual.e3 ; estado_atual.e4 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.095      ;
+; 0.831 ; HPixel[5]       ; HPixel[5]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.097      ;
+; 0.838 ; VCount[10]      ; VCount[10]      ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.104      ;
++-------+-----------------+-----------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLKM_M|altpll_component|pll|clk[0]'                                                          ;
++-------+--------------+----------------+------------------+------------------------------------+------------+------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                              ; Clock Edge ; Target           ;
++-------+--------------+----------------+------------------+------------------------------------+------------+------------------+
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[0]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[10]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[1]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[2]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[3]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[4]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[5]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[6]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[7]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[8]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[9]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[0]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[10]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[1]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[2]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[3]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[4]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[5]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[6]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[7]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[8]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[9]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[0]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[10]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[1]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[2]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[3]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[4]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[5]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[6]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[7]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[8]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[9]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[0]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[1]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[2]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[3]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[4]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[5]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[6]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[7]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[8]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[9]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[0]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[1]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[2]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[3]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[4]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[5]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[6]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[7]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[8]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[9]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[0]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[1]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[2]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[3]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[4]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[5]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[6]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[7]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[8]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[9]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[10]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[1]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[2]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[3]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[4]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[5]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[6]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[7]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[8]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[9]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[0]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[1]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[2]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[3]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[4]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[5]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[6]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[0]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[1]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[2]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[3]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[4]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[5]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[6]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; bateu            ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; estado_atual.e0  ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; estado_atual.e1  ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; estado_atual.e2  ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; estado_atual.e3  ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; estado_atual.e4  ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; grama_y[2]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; grama_y[3]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; grama_y[4]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; grama_y[5]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; grama_y[6]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; grama_y[7]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; personagem_x[10] ;
++-------+--------------+----------------+------------------+------------------------------------+------------+------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk_27'                                                                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+; 18.518 ; 18.518       ; 0.000          ; High Pulse Width ; clk_27 ; Rise       ; CLKM_M|altpll_component|pll|clk[0]   ;
+; 18.518 ; 18.518       ; 0.000          ; High Pulse Width ; clk_27 ; Rise       ; CLKM_M|altpll_component|pll|inclk[0] ;
+; 18.518 ; 18.518       ; 0.000          ; High Pulse Width ; clk_27 ; Rise       ; clk_27|combout                       ;
+; 18.519 ; 18.519       ; 0.000          ; Low Pulse Width  ; clk_27 ; Rise       ; CLKM_M|altpll_component|pll|clk[0]   ;
+; 18.519 ; 18.519       ; 0.000          ; Low Pulse Width  ; clk_27 ; Rise       ; CLKM_M|altpll_component|pll|inclk[0] ;
+; 18.519 ; 18.519       ; 0.000          ; Low Pulse Width  ; clk_27 ; Rise       ; clk_27|combout                       ;
+; 34.657 ; 37.037       ; 2.380          ; Port Rate        ; clk_27 ; Rise       ; clk_27                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Setup Times                                                                                ;
++-----------+------------+--------+--------+------------+------------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                    ;
++-----------+------------+--------+--------+------------+------------------------------------+
+; botao[*]  ; clk_27     ; 10.427 ; 10.427 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[0] ; clk_27     ; 10.427 ; 10.427 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[1] ; clk_27     ; 9.940  ; 9.940  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[2] ; clk_27     ; 8.823  ; 8.823  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[3] ; clk_27     ; 9.288  ; 9.288  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; reset     ; clk_27     ; 6.312  ; 6.312  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Hold Times                                                                                   ;
++-----------+------------+---------+---------+------------+------------------------------------+
+; Data Port ; Clock Port ; Rise    ; Fall    ; Clock Edge ; Clock Reference                    ;
++-----------+------------+---------+---------+------------+------------------------------------+
+; botao[*]  ; clk_27     ; -6.541  ; -6.541  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[0] ; clk_27     ; -10.186 ; -10.186 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[1] ; clk_27     ; -6.706  ; -6.706  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[2] ; clk_27     ; -6.541  ; -6.541  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[3] ; clk_27     ; -8.957  ; -8.957  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; reset     ; clk_27     ; -2.500  ; -2.500  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
++-----------+------------+---------+---------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                    ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; VGA_B[*]  ; clk_27     ; 5.787 ; 5.787 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[0] ; clk_27     ; 5.405 ; 5.405 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[1] ; clk_27     ; 5.549 ; 5.549 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[2] ; clk_27     ; 5.656 ; 5.656 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[3] ; clk_27     ; 5.110 ; 5.110 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[4] ; clk_27     ; 5.281 ; 5.281 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[5] ; clk_27     ; 5.627 ; 5.627 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[6] ; clk_27     ; 5.787 ; 5.787 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[7] ; clk_27     ; 5.217 ; 5.217 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[8] ; clk_27     ; 5.400 ; 5.400 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[9] ; clk_27     ; 5.481 ; 5.481 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_BLANK ; clk_27     ; 7.125 ; 7.125 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_CLK   ; clk_27     ; 2.885 ;       ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_G[*]  ; clk_27     ; 6.449 ; 6.449 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[0] ; clk_27     ; 6.449 ; 6.449 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[1] ; clk_27     ; 6.393 ; 6.393 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[2] ; clk_27     ; 6.176 ; 6.176 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[3] ; clk_27     ; 6.206 ; 6.206 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[4] ; clk_27     ; 5.967 ; 5.967 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[5] ; clk_27     ; 5.943 ; 5.943 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[6] ; clk_27     ; 5.530 ; 5.530 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[7] ; clk_27     ; 5.891 ; 5.891 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[8] ; clk_27     ; 5.579 ; 5.579 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[9] ; clk_27     ; 5.710 ; 5.710 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_HS    ; clk_27     ; 5.455 ; 5.455 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_R[*]  ; clk_27     ; 6.766 ; 6.766 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[0] ; clk_27     ; 5.467 ; 5.467 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[1] ; clk_27     ; 5.825 ; 5.825 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[2] ; clk_27     ; 6.213 ; 6.213 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[3] ; clk_27     ; 5.696 ; 5.696 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[4] ; clk_27     ; 6.766 ; 6.766 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[5] ; clk_27     ; 6.369 ; 6.369 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[6] ; clk_27     ; 5.864 ; 5.864 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[7] ; clk_27     ; 5.730 ; 5.730 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[8] ; clk_27     ; 5.545 ; 5.545 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[9] ; clk_27     ; 6.138 ; 6.138 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_VS    ; clk_27     ; 5.807 ; 5.807 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_CLK   ; clk_27     ;       ; 2.885 ; Fall       ; CLKM_M|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                            ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; VGA_B[*]  ; clk_27     ; 5.110 ; 5.110 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[0] ; clk_27     ; 5.405 ; 5.405 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[1] ; clk_27     ; 5.549 ; 5.549 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[2] ; clk_27     ; 5.656 ; 5.656 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[3] ; clk_27     ; 5.110 ; 5.110 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[4] ; clk_27     ; 5.281 ; 5.281 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[5] ; clk_27     ; 5.627 ; 5.627 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[6] ; clk_27     ; 5.787 ; 5.787 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[7] ; clk_27     ; 5.217 ; 5.217 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[8] ; clk_27     ; 5.400 ; 5.400 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[9] ; clk_27     ; 5.481 ; 5.481 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_BLANK ; clk_27     ; 6.754 ; 6.754 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_CLK   ; clk_27     ; 2.885 ;       ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_G[*]  ; clk_27     ; 5.530 ; 5.530 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[0] ; clk_27     ; 6.449 ; 6.449 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[1] ; clk_27     ; 6.393 ; 6.393 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[2] ; clk_27     ; 6.176 ; 6.176 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[3] ; clk_27     ; 6.206 ; 6.206 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[4] ; clk_27     ; 5.967 ; 5.967 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[5] ; clk_27     ; 5.943 ; 5.943 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[6] ; clk_27     ; 5.530 ; 5.530 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[7] ; clk_27     ; 5.891 ; 5.891 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[8] ; clk_27     ; 5.579 ; 5.579 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[9] ; clk_27     ; 5.710 ; 5.710 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_HS    ; clk_27     ; 5.455 ; 5.455 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_R[*]  ; clk_27     ; 5.467 ; 5.467 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[0] ; clk_27     ; 5.467 ; 5.467 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[1] ; clk_27     ; 5.825 ; 5.825 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[2] ; clk_27     ; 6.213 ; 6.213 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[3] ; clk_27     ; 5.696 ; 5.696 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[4] ; clk_27     ; 6.766 ; 6.766 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[5] ; clk_27     ; 6.369 ; 6.369 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[6] ; clk_27     ; 5.864 ; 5.864 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[7] ; clk_27     ; 5.730 ; 5.730 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[8] ; clk_27     ; 5.545 ; 5.545 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[9] ; clk_27     ; 6.138 ; 6.138 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_VS    ; clk_27     ; 5.807 ; 5.807 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_CLK   ; clk_27     ;       ; 2.885 ; Fall       ; CLKM_M|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+------------------------------------+
+
+
++------------------------------------------------------------+
+; Fast Model Setup Summary                                   ;
++------------------------------------+-------+---------------+
+; Clock                              ; Slack ; End Point TNS ;
++------------------------------------+-------+---------------+
+; CLKM_M|altpll_component|pll|clk[0] ; 4.210 ; 0.000         ;
++------------------------------------+-------+---------------+
+
+
++------------------------------------------------------------+
+; Fast Model Hold Summary                                    ;
++------------------------------------+-------+---------------+
+; Clock                              ; Slack ; End Point TNS ;
++------------------------------------+-------+---------------+
+; CLKM_M|altpll_component|pll|clk[0] ; 0.215 ; 0.000         ;
++------------------------------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-------------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                      ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; CLKM_M|altpll_component|pll|clk[0] ; 3.629  ; 0.000         ;
+; clk_27                             ; 18.518 ; 0.000         ;
++------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLKM_M|altpll_component|pll|clk[0]'                                                                                                     ;
++-------+-----------------+---------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node       ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+---------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; 4.210 ; quadrado3_y[2]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.004     ; 5.077      ;
+; 4.217 ; HPixel[10]      ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 5.066      ;
+; 4.234 ; HPixel[8]       ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 5.049      ;
+; 4.278 ; HPixel[9]       ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 5.005      ;
+; 4.285 ; HPixel[10]      ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.009     ; 4.997      ;
+; 4.302 ; HPixel[8]       ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.009     ; 4.980      ;
+; 4.304 ; HPixel[10]      ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.980      ;
+; 4.308 ; quadrado3_y[5]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.004     ; 4.979      ;
+; 4.309 ; quadrado3_y[4]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.004     ; 4.978      ;
+; 4.317 ; quadrado3_y[3]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.967      ;
+; 4.318 ; personagem_x[3] ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.002     ; 4.971      ;
+; 4.321 ; HPixel[8]       ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.963      ;
+; 4.321 ; personagem_x[2] ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 4.965      ;
+; 4.326 ; quadrado3_y[2]  ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.002     ; 4.963      ;
+; 4.337 ; personagem_x[5] ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.002     ; 4.952      ;
+; 4.340 ; quadrado1_x[9]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.006     ; 4.945      ;
+; 4.341 ; HPixel[10]      ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.943      ;
+; 4.342 ; quadrado3_y[2]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.942      ;
+; 4.342 ; quadrado1_y[4]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.009      ; 4.958      ;
+; 4.342 ; quadrado1_y[3]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.009      ; 4.958      ;
+; 4.342 ; quadrado1_y[2]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.007      ; 4.956      ;
+; 4.346 ; HPixel[9]       ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.009     ; 4.936      ;
+; 4.350 ; quadrado3_y[2]  ; VGA_R[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.934      ;
+; 4.350 ; quadrado3_y[6]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.934      ;
+; 4.351 ; quadrado3_y[7]  ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.933      ;
+; 4.358 ; HPixel[8]       ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.926      ;
+; 4.359 ; personagem_x[4] ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.002     ; 4.930      ;
+; 4.364 ; quadrado3_y[2]  ; VGA_G[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.919      ;
+; 4.365 ; HPixel[9]       ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.919      ;
+; 4.385 ; personagem_x[3] ; VGA_G[2]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.899      ;
+; 4.385 ; quadrado2_y[5]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.017     ; 4.889      ;
+; 4.386 ; HPixel[10]      ; VGA_B[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.897      ;
+; 4.388 ; personagem_x[2] ; VGA_G[2]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 4.893      ;
+; 4.391 ; quadrado2_y[4]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.017     ; 4.883      ;
+; 4.392 ; HPixel[5]       ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.892      ;
+; 4.398 ; quadrado3_y[2]  ; VGA_R[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.004     ; 4.889      ;
+; 4.400 ; quadrado2_y[2]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.017     ; 4.874      ;
+; 4.402 ; HPixel[9]       ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.882      ;
+; 4.403 ; HPixel[8]       ; VGA_B[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.880      ;
+; 4.404 ; personagem_x[5] ; VGA_G[2]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.880      ;
+; 4.408 ; quadrado1_x[9]  ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.876      ;
+; 4.410 ; quadrado3_y[2]  ; VGA_R[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.873      ;
+; 4.410 ; quadrado1_y[4]  ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.008      ; 4.889      ;
+; 4.410 ; personagem_x[3] ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.006     ; 4.875      ;
+; 4.410 ; quadrado2_y[3]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.017     ; 4.864      ;
+; 4.410 ; quadrado1_y[3]  ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.008      ; 4.889      ;
+; 4.410 ; quadrado1_y[2]  ; VGA_G[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.006      ; 4.887      ;
+; 4.413 ; personagem_x[2] ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.009     ; 4.869      ;
+; 4.414 ; HPixel[2]       ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.869      ;
+; 4.420 ; quadrado3_y[2]  ; VGA_R[6]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 4.866      ;
+; 4.422 ; quadrado2_y[5]  ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.017     ; 4.852      ;
+; 4.424 ; quadrado3_y[5]  ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.002     ; 4.865      ;
+; 4.425 ; quadrado3_y[4]  ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.002     ; 4.864      ;
+; 4.426 ; quadrado3_y[2]  ; VGA_B[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.858      ;
+; 4.426 ; personagem_x[4] ; VGA_G[2]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.858      ;
+; 4.426 ; VPixel[1]       ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.006      ; 4.871      ;
+; 4.427 ; quadrado1_x[9]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 4.859      ;
+; 4.427 ; HPixel[4]       ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.856      ;
+; 4.428 ; quadrado2_y[4]  ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.017     ; 4.846      ;
+; 4.429 ; quadrado1_y[4]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.010      ; 4.872      ;
+; 4.429 ; HPixel[5]       ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.855      ;
+; 4.429 ; personagem_x[5] ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.006     ; 4.856      ;
+; 4.429 ; quadrado1_y[3]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.010      ; 4.872      ;
+; 4.429 ; quadrado1_y[2]  ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.008      ; 4.870      ;
+; 4.432 ; quadrado3_y[2]  ; VGA_G[2]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.852      ;
+; 4.432 ; personagem_x[3] ; VGA_R[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.004     ; 4.855      ;
+; 4.433 ; quadrado3_y[2]  ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.006     ; 4.852      ;
+; 4.433 ; quadrado3_y[3]  ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 4.853      ;
+; 4.435 ; personagem_x[2] ; VGA_R[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.849      ;
+; 4.437 ; quadrado2_y[2]  ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.017     ; 4.837      ;
+; 4.440 ; quadrado3_y[5]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.844      ;
+; 4.441 ; quadrado3_y[4]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.843      ;
+; 4.442 ; HPixel[10]      ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 4.844      ;
+; 4.447 ; HPixel[9]       ; VGA_B[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.836      ;
+; 4.447 ; quadrado2_y[3]  ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.017     ; 4.827      ;
+; 4.448 ; quadrado3_y[5]  ; VGA_R[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.836      ;
+; 4.449 ; quadrado3_y[3]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 4.832      ;
+; 4.449 ; quadrado3_y[4]  ; VGA_R[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.835      ;
+; 4.451 ; HPixel[5]       ; VGA_G[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 4.835      ;
+; 4.451 ; HPixel[2]       ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.833      ;
+; 4.451 ; personagem_x[4] ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.006     ; 4.834      ;
+; 4.451 ; personagem_x[5] ; VGA_R[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.004     ; 4.836      ;
+; 4.452 ; personagem_x[3] ; VGA_R[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.832      ;
+; 4.454 ; HPixel[5]       ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.829      ;
+; 4.454 ; quadrado1_y[5]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.009      ; 4.846      ;
+; 4.454 ; HPixel[10]      ; VGA_R[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 4.832      ;
+; 4.455 ; personagem_x[2] ; VGA_R[7]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 4.826      ;
+; 4.456 ; quadrado1_y[6]  ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; 0.009      ; 4.844      ;
+; 4.457 ; quadrado3_y[3]  ; VGA_R[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.010     ; 4.824      ;
+; 4.458 ; HPixel[10]      ; VGA_B[4]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 4.828      ;
+; 4.458 ; personagem_x[7] ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 4.828      ;
+; 4.458 ; HPixel[10]      ; VGA_R[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.825      ;
+; 4.458 ; HPixel[3]       ; VGA_B[8]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.007     ; 4.826      ;
+; 4.459 ; personagem_x[3] ; VGA_R[6]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 4.827      ;
+; 4.461 ; personagem_x[6] ; VGA_R[5]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 4.825      ;
+; 4.462 ; quadrado3_y[5]  ; VGA_G[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.821      ;
+; 4.462 ; HPixel[3]       ; VGA_G[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.821      ;
+; 4.462 ; personagem_x[2] ; VGA_R[6]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.821      ;
+; 4.463 ; quadrado3_y[4]  ; VGA_G[3]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.008     ; 4.820      ;
+; 4.464 ; quadrado1_x[9]  ; VGA_B[9]~reg0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 9.259        ; -0.005     ; 4.822      ;
++-------+-----------------+---------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLKM_M|altpll_component|pll|clk[0]'                                                                                                        ;
++-------+-----------------+-----------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node         ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; 0.215 ; estado_atual.e1 ; estado_atual.e1 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_b[8]  ; quadrado2_b[8]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_b[10] ; quadrado2_b[10] ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_b[1]  ; quadrado2_b[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_b[3]  ; quadrado3_b[3]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_b[4]  ; quadrado3_b[4]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_b[5]  ; quadrado3_b[5]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_b[6]  ; quadrado3_b[6]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_b[7]  ; quadrado3_b[7]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_b[8]  ; quadrado3_b[8]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_b[9]  ; quadrado3_b[9]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_b[10] ; quadrado3_b[10] ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_b[1]  ; quadrado3_b[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_b[2]  ; quadrado3_b[2]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_b[8]  ; quadrado1_b[8]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_b[9]  ; quadrado1_b[9]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_b[10] ; quadrado1_b[10] ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_b[1]  ; quadrado1_b[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_a[1]  ; quadrado1_a[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_a[0]  ; quadrado1_a[0]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_y[1]  ; quadrado1_y[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_y[2]  ; quadrado1_y[2]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_y[3]  ; quadrado1_y[3]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_y[4]  ; quadrado1_y[4]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_y[5]  ; quadrado1_y[5]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_y[6]  ; quadrado1_y[6]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_a[1]  ; quadrado2_a[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_a[0]  ; quadrado2_a[0]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_y[8]  ; quadrado2_y[8]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_y[1]  ; quadrado2_y[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_y[2]  ; quadrado2_y[2]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_y[3]  ; quadrado2_y[3]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_y[4]  ; quadrado2_y[4]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_y[5]  ; quadrado2_y[5]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_y[6]  ; quadrado2_y[6]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado2_y[7]  ; quadrado2_y[7]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_y[1]  ; quadrado3_y[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_y[2]  ; quadrado3_y[2]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_y[3]  ; quadrado3_y[3]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_y[4]  ; quadrado3_y[4]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_y[5]  ; quadrado3_y[5]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_y[6]  ; quadrado3_y[6]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_y[7]  ; quadrado3_y[7]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_y[8]  ; quadrado3_y[8]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_y[10] ; quadrado3_y[10] ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_a[1]  ; quadrado3_a[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado3_a[0]  ; quadrado3_a[0]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; bateu           ; bateu           ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_b[7]  ; quadrado1_b[7]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; quadrado1_y[7]  ; quadrado1_y[7]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; auxscore[0]     ; auxscore[0]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; auxscore[1]     ; auxscore[1]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; auxscore[2]     ; auxscore[2]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; auxscore[4]     ; auxscore[4]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; auxscore[5]     ; auxscore[5]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; auxscore[6]     ; auxscore[6]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; auxscore[3]     ; auxscore[3]     ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; grama_y[2]      ; grama_y[2]      ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; grama_y[3]      ; grama_y[3]      ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; vga_hsync       ; vga_hsync       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; vga_vsync       ; vga_vsync       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241 ; quadrado2_a[0]  ; quadrado2_a[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.393      ;
+; 0.243 ; quadrado3_a[1]  ; quadrado3_a[0]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.395      ;
+; 0.251 ; HCount[10]      ; HCount[10]      ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.403      ;
+; 0.253 ; score[6]        ; score[6]        ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.405      ;
+; 0.256 ; HCount[5]       ; vga_hsync       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.408      ;
+; 0.257 ; auxscore2[6]    ; auxscore2[6]    ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.409      ;
+; 0.258 ; quadrado1_a[0]  ; quadrado1_a[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.410      ;
+; 0.258 ; quadrado1_a[1]  ; quadrado1_a[0]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.410      ;
+; 0.259 ; quadrado1_a[1]  ; quadrado1_x[6]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.411      ;
+; 0.261 ; quadrado1_a[0]  ; quadrado1_x[10] ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.413      ;
+; 0.299 ; estado_atual.e4 ; estado_atual.e0 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.451      ;
+; 0.309 ; estado_atual.e2 ; estado_atual.e4 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.461      ;
+; 0.333 ; estado_atual.e2 ; estado_atual.e3 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.485      ;
+; 0.357 ; estado_atual.e4 ; estado_atual.e1 ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; quadrado3_a[0]  ; quadrado3_a[1]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; VCount[1]       ; VCount[1]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; quadrado2_a[1]  ; quadrado2_a[0]  ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.511      ;
+; 0.362 ; VCount[9]       ; VCount[9]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; VCount[4]       ; VCount[4]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; VCount[2]       ; VCount[2]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; auxscore2[3]    ; auxscore2[3]    ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.516      ;
+; 0.366 ; VCount[7]       ; VCount[7]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.518      ;
+; 0.367 ; HPixel[7]       ; HPixel[7]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; auxscore2[1]    ; auxscore2[1]    ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.519      ;
+; 0.368 ; HCount[0]       ; HCount[0]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; HCount[8]       ; HCount[8]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; HPixel[0]       ; HPixel[0]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; HPixel[9]       ; HPixel[9]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.520      ;
+; 0.369 ; score[1]        ; score[1]        ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.521      ;
+; 0.370 ; HCount[1]       ; HCount[1]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.522      ;
+; 0.370 ; HCount[3]       ; HCount[3]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.522      ;
+; 0.370 ; score[3]        ; score[3]        ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.522      ;
+; 0.371 ; VCount[10]      ; VCount[10]      ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; score[5]        ; score[5]        ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.523      ;
+; 0.373 ; HCount[6]       ; HCount[6]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373 ; VCount[3]       ; VCount[3]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373 ; VCount[8]       ; VCount[8]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373 ; HPixel[5]       ; HPixel[5]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374 ; VCount[5]       ; VCount[5]       ; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.526      ;
++-------+-----------------+-----------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLKM_M|altpll_component|pll|clk[0]'                                                          ;
++-------+--------------+----------------+------------------+------------------------------------+------------+------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                              ; Clock Edge ; Target           ;
++-------+--------------+----------------+------------------+------------------------------------+------------+------------------+
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[0]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[10]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[1]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[2]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[3]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[4]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[5]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[6]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[7]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[8]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HCount[9]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[0]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[10]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[1]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[2]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[3]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[4]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[5]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[6]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[7]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[8]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; HPixel[9]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[0]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[10]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[1]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[2]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[3]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[4]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[5]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[6]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[7]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[8]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VCount[9]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[0]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[1]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[2]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[3]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[4]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[5]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[6]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[7]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[8]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_B[9]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[0]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[1]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[2]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[3]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[4]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[5]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[6]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[7]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[8]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_G[9]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[0]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[1]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[2]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[3]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[4]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[5]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[6]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[7]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[8]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VGA_R[9]~reg0    ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[10]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[1]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[2]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[3]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[4]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[5]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[6]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[7]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[8]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; VPixel[9]        ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[0]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[1]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[2]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[3]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[4]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[5]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore2[6]     ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[0]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[1]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[2]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[3]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[4]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[5]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; auxscore[6]      ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; bateu            ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; estado_atual.e0  ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; estado_atual.e1  ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; estado_atual.e2  ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; estado_atual.e3  ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; estado_atual.e4  ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; grama_y[2]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; grama_y[3]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; grama_y[4]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; grama_y[5]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; grama_y[6]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; grama_y[7]       ;
+; 3.629 ; 4.629        ; 1.000          ; High Pulse Width ; CLKM_M|altpll_component|pll|clk[0] ; Rise       ; personagem_x[10] ;
++-------+--------------+----------------+------------------+------------------------------------+------------+------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk_27'                                                                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+; 18.518 ; 18.518       ; 0.000          ; High Pulse Width ; clk_27 ; Rise       ; CLKM_M|altpll_component|pll|clk[0]   ;
+; 18.518 ; 18.518       ; 0.000          ; High Pulse Width ; clk_27 ; Rise       ; CLKM_M|altpll_component|pll|inclk[0] ;
+; 18.518 ; 18.518       ; 0.000          ; High Pulse Width ; clk_27 ; Rise       ; clk_27|combout                       ;
+; 18.519 ; 18.519       ; 0.000          ; Low Pulse Width  ; clk_27 ; Rise       ; CLKM_M|altpll_component|pll|clk[0]   ;
+; 18.519 ; 18.519       ; 0.000          ; Low Pulse Width  ; clk_27 ; Rise       ; CLKM_M|altpll_component|pll|inclk[0] ;
+; 18.519 ; 18.519       ; 0.000          ; Low Pulse Width  ; clk_27 ; Rise       ; clk_27|combout                       ;
+; 34.657 ; 37.037       ; 2.380          ; Port Rate        ; clk_27 ; Rise       ; clk_27                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Setup Times                                                                              ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; botao[*]  ; clk_27     ; 5.710 ; 5.710 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[0] ; clk_27     ; 5.710 ; 5.710 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[1] ; clk_27     ; 5.471 ; 5.471 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[2] ; clk_27     ; 4.971 ; 4.971 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[3] ; clk_27     ; 5.208 ; 5.208 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; reset     ; clk_27     ; 3.264 ; 3.264 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Hold Times                                                                                 ;
++-----------+------------+--------+--------+------------+------------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                    ;
++-----------+------------+--------+--------+------------+------------------------------------+
+; botao[*]  ; clk_27     ; -3.914 ; -3.914 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[0] ; clk_27     ; -5.581 ; -5.581 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[1] ; clk_27     ; -3.914 ; -3.914 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[2] ; clk_27     ; -3.935 ; -3.935 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[3] ; clk_27     ; -4.949 ; -4.949 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; reset     ; clk_27     ; -1.385 ; -1.385 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                    ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; VGA_B[*]  ; clk_27     ; 2.899 ; 2.899 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[0] ; clk_27     ; 2.745 ; 2.745 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[1] ; clk_27     ; 2.810 ; 2.810 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[2] ; clk_27     ; 2.899 ; 2.899 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[3] ; clk_27     ; 2.578 ; 2.578 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[4] ; clk_27     ; 2.709 ; 2.709 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[5] ; clk_27     ; 2.814 ; 2.814 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[6] ; clk_27     ; 2.891 ; 2.891 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[7] ; clk_27     ; 2.646 ; 2.646 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[8] ; clk_27     ; 2.698 ; 2.698 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[9] ; clk_27     ; 2.740 ; 2.740 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_BLANK ; clk_27     ; 3.454 ; 3.454 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_CLK   ; clk_27     ; 1.432 ;       ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_G[*]  ; clk_27     ; 3.201 ; 3.201 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[0] ; clk_27     ; 3.201 ; 3.201 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[1] ; clk_27     ; 3.194 ; 3.194 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[2] ; clk_27     ; 3.068 ; 3.068 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[3] ; clk_27     ; 3.092 ; 3.092 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[4] ; clk_27     ; 2.986 ; 2.986 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[5] ; clk_27     ; 2.961 ; 2.961 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[6] ; clk_27     ; 2.787 ; 2.787 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[7] ; clk_27     ; 2.973 ; 2.973 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[8] ; clk_27     ; 2.862 ; 2.862 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[9] ; clk_27     ; 2.872 ; 2.872 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_HS    ; clk_27     ; 2.786 ; 2.786 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_R[*]  ; clk_27     ; 3.438 ; 3.438 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[0] ; clk_27     ; 2.782 ; 2.782 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[1] ; clk_27     ; 2.923 ; 2.923 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[2] ; clk_27     ; 3.101 ; 3.101 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[3] ; clk_27     ; 2.909 ; 2.909 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[4] ; clk_27     ; 3.438 ; 3.438 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[5] ; clk_27     ; 3.153 ; 3.153 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[6] ; clk_27     ; 2.948 ; 2.948 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[7] ; clk_27     ; 2.884 ; 2.884 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[8] ; clk_27     ; 2.822 ; 2.822 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[9] ; clk_27     ; 3.035 ; 3.035 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_VS    ; clk_27     ; 2.886 ; 2.886 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_CLK   ; clk_27     ;       ; 1.432 ; Fall       ; CLKM_M|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                            ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; VGA_B[*]  ; clk_27     ; 2.578 ; 2.578 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[0] ; clk_27     ; 2.745 ; 2.745 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[1] ; clk_27     ; 2.810 ; 2.810 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[2] ; clk_27     ; 2.899 ; 2.899 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[3] ; clk_27     ; 2.578 ; 2.578 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[4] ; clk_27     ; 2.709 ; 2.709 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[5] ; clk_27     ; 2.814 ; 2.814 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[6] ; clk_27     ; 2.891 ; 2.891 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[7] ; clk_27     ; 2.646 ; 2.646 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[8] ; clk_27     ; 2.698 ; 2.698 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[9] ; clk_27     ; 2.740 ; 2.740 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_BLANK ; clk_27     ; 3.372 ; 3.372 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_CLK   ; clk_27     ; 1.432 ;       ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_G[*]  ; clk_27     ; 2.787 ; 2.787 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[0] ; clk_27     ; 3.201 ; 3.201 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[1] ; clk_27     ; 3.194 ; 3.194 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[2] ; clk_27     ; 3.068 ; 3.068 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[3] ; clk_27     ; 3.092 ; 3.092 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[4] ; clk_27     ; 2.986 ; 2.986 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[5] ; clk_27     ; 2.961 ; 2.961 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[6] ; clk_27     ; 2.787 ; 2.787 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[7] ; clk_27     ; 2.973 ; 2.973 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[8] ; clk_27     ; 2.862 ; 2.862 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[9] ; clk_27     ; 2.872 ; 2.872 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_HS    ; clk_27     ; 2.786 ; 2.786 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_R[*]  ; clk_27     ; 2.782 ; 2.782 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[0] ; clk_27     ; 2.782 ; 2.782 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[1] ; clk_27     ; 2.923 ; 2.923 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[2] ; clk_27     ; 3.101 ; 3.101 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[3] ; clk_27     ; 2.909 ; 2.909 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[4] ; clk_27     ; 3.438 ; 3.438 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[5] ; clk_27     ; 3.153 ; 3.153 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[6] ; clk_27     ; 2.948 ; 2.948 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[7] ; clk_27     ; 2.884 ; 2.884 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[8] ; clk_27     ; 2.822 ; 2.822 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[9] ; clk_27     ; 3.035 ; 3.035 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_VS    ; clk_27     ; 2.886 ; 2.886 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_CLK   ; clk_27     ;       ; 1.432 ; Fall       ; CLKM_M|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                              ;
++-------------------------------------+---------+-------+----------+---------+---------------------+
+; Clock                               ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack                    ; -2.275  ; 0.215 ; N/A      ; N/A     ; 3.629               ;
+;  CLKM_M|altpll_component|pll|clk[0] ; -2.275  ; 0.215 ; N/A      ; N/A     ; 3.629               ;
+;  clk_27                             ; N/A     ; N/A   ; N/A      ; N/A     ; 18.518              ;
+; Design-wide TNS                     ; -46.431 ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLKM_M|altpll_component|pll|clk[0] ; -46.431 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  clk_27                             ; N/A     ; N/A   ; N/A      ; N/A     ; 0.000               ;
++-------------------------------------+---------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Setup Times                                                                                ;
++-----------+------------+--------+--------+------------+------------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                    ;
++-----------+------------+--------+--------+------------+------------------------------------+
+; botao[*]  ; clk_27     ; 10.427 ; 10.427 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[0] ; clk_27     ; 10.427 ; 10.427 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[1] ; clk_27     ; 9.940  ; 9.940  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[2] ; clk_27     ; 8.823  ; 8.823  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[3] ; clk_27     ; 9.288  ; 9.288  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; reset     ; clk_27     ; 6.312  ; 6.312  ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Hold Times                                                                                 ;
++-----------+------------+--------+--------+------------+------------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                    ;
++-----------+------------+--------+--------+------------+------------------------------------+
+; botao[*]  ; clk_27     ; -3.914 ; -3.914 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[0] ; clk_27     ; -5.581 ; -5.581 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[1] ; clk_27     ; -3.914 ; -3.914 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[2] ; clk_27     ; -3.935 ; -3.935 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  botao[3] ; clk_27     ; -4.949 ; -4.949 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; reset     ; clk_27     ; -1.385 ; -1.385 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                    ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; VGA_B[*]  ; clk_27     ; 5.787 ; 5.787 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[0] ; clk_27     ; 5.405 ; 5.405 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[1] ; clk_27     ; 5.549 ; 5.549 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[2] ; clk_27     ; 5.656 ; 5.656 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[3] ; clk_27     ; 5.110 ; 5.110 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[4] ; clk_27     ; 5.281 ; 5.281 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[5] ; clk_27     ; 5.627 ; 5.627 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[6] ; clk_27     ; 5.787 ; 5.787 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[7] ; clk_27     ; 5.217 ; 5.217 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[8] ; clk_27     ; 5.400 ; 5.400 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[9] ; clk_27     ; 5.481 ; 5.481 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_BLANK ; clk_27     ; 7.125 ; 7.125 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_CLK   ; clk_27     ; 2.885 ;       ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_G[*]  ; clk_27     ; 6.449 ; 6.449 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[0] ; clk_27     ; 6.449 ; 6.449 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[1] ; clk_27     ; 6.393 ; 6.393 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[2] ; clk_27     ; 6.176 ; 6.176 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[3] ; clk_27     ; 6.206 ; 6.206 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[4] ; clk_27     ; 5.967 ; 5.967 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[5] ; clk_27     ; 5.943 ; 5.943 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[6] ; clk_27     ; 5.530 ; 5.530 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[7] ; clk_27     ; 5.891 ; 5.891 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[8] ; clk_27     ; 5.579 ; 5.579 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[9] ; clk_27     ; 5.710 ; 5.710 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_HS    ; clk_27     ; 5.455 ; 5.455 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_R[*]  ; clk_27     ; 6.766 ; 6.766 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[0] ; clk_27     ; 5.467 ; 5.467 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[1] ; clk_27     ; 5.825 ; 5.825 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[2] ; clk_27     ; 6.213 ; 6.213 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[3] ; clk_27     ; 5.696 ; 5.696 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[4] ; clk_27     ; 6.766 ; 6.766 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[5] ; clk_27     ; 6.369 ; 6.369 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[6] ; clk_27     ; 5.864 ; 5.864 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[7] ; clk_27     ; 5.730 ; 5.730 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[8] ; clk_27     ; 5.545 ; 5.545 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[9] ; clk_27     ; 6.138 ; 6.138 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_VS    ; clk_27     ; 5.807 ; 5.807 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_CLK   ; clk_27     ;       ; 2.885 ; Fall       ; CLKM_M|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                            ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------+-------+-------+------------+------------------------------------+
+; VGA_B[*]  ; clk_27     ; 2.578 ; 2.578 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[0] ; clk_27     ; 2.745 ; 2.745 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[1] ; clk_27     ; 2.810 ; 2.810 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[2] ; clk_27     ; 2.899 ; 2.899 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[3] ; clk_27     ; 2.578 ; 2.578 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[4] ; clk_27     ; 2.709 ; 2.709 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[5] ; clk_27     ; 2.814 ; 2.814 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[6] ; clk_27     ; 2.891 ; 2.891 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[7] ; clk_27     ; 2.646 ; 2.646 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[8] ; clk_27     ; 2.698 ; 2.698 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_B[9] ; clk_27     ; 2.740 ; 2.740 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_BLANK ; clk_27     ; 3.372 ; 3.372 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_CLK   ; clk_27     ; 1.432 ;       ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_G[*]  ; clk_27     ; 2.787 ; 2.787 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[0] ; clk_27     ; 3.201 ; 3.201 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[1] ; clk_27     ; 3.194 ; 3.194 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[2] ; clk_27     ; 3.068 ; 3.068 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[3] ; clk_27     ; 3.092 ; 3.092 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[4] ; clk_27     ; 2.986 ; 2.986 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[5] ; clk_27     ; 2.961 ; 2.961 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[6] ; clk_27     ; 2.787 ; 2.787 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[7] ; clk_27     ; 2.973 ; 2.973 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[8] ; clk_27     ; 2.862 ; 2.862 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_G[9] ; clk_27     ; 2.872 ; 2.872 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_HS    ; clk_27     ; 2.786 ; 2.786 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_R[*]  ; clk_27     ; 2.782 ; 2.782 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[0] ; clk_27     ; 2.782 ; 2.782 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[1] ; clk_27     ; 2.923 ; 2.923 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[2] ; clk_27     ; 3.101 ; 3.101 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[3] ; clk_27     ; 2.909 ; 2.909 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[4] ; clk_27     ; 3.438 ; 3.438 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[5] ; clk_27     ; 3.153 ; 3.153 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[6] ; clk_27     ; 2.948 ; 2.948 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[7] ; clk_27     ; 2.884 ; 2.884 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[8] ; clk_27     ; 2.822 ; 2.822 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+;  VGA_R[9] ; clk_27     ; 3.035 ; 3.035 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_VS    ; clk_27     ; 2.886 ; 2.886 ; Rise       ; CLKM_M|altpll_component|pll|clk[0] ;
+; VGA_CLK   ; clk_27     ;       ; 1.432 ; Fall       ; CLKM_M|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                     ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; From Clock                         ; To Clock                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 1360112  ; 0        ; 0        ; 0        ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                      ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; From Clock                         ; To Clock                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; CLKM_M|altpll_component|pll|clk[0] ; CLKM_M|altpll_component|pll|clk[0] ; 1360112  ; 0        ; 0        ; 0        ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 257   ; 257  ;
+; Unconstrained Output Ports      ; 34    ; 34   ;
+; Unconstrained Output Port Paths ; 35    ; 35   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Mar 08 13:58:05 2018
+Info: Command: quartus_sta unoraid -c unoraid
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'unoraid.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
+Info (332110): Deriving PLL clocks
+    Info (332110): create_clock -period 37.037 -waveform {0.000 18.518} -name clk_27 clk_27
+    Info (332110): create_generated_clock -source {CLKM_M|altpll_component|pll|inclk[0]} -multiply_by 4 -duty_cycle 50.00 -name {CLKM_M|altpll_component|pll|clk[0]} {CLKM_M|altpll_component|pll|clk[0]}
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.275
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.275       -46.431 CLKM_M|altpll_component|pll|clk[0] 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 CLKM_M|altpll_component|pll|clk[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 3.629
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     3.629         0.000 CLKM_M|altpll_component|pll|clk[0] 
+    Info (332119):    18.518         0.000 clk_27 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 4.210
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     4.210         0.000 CLKM_M|altpll_component|pll|clk[0] 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLKM_M|altpll_component|pll|clk[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 3.629
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     3.629         0.000 CLKM_M|altpll_component|pll|clk[0] 
+    Info (332119):    18.518         0.000 clk_27 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 501 megabytes
+    Info: Processing ended: Thu Mar 08 13:58:07 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
